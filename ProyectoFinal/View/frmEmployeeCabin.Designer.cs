@@ -66,7 +66,6 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.TableLayoutPanel tlpCabin;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion
     }

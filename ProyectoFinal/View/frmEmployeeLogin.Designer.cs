@@ -177,6 +177,7 @@ namespace ProyectoFinal.View
             this.btnSolicitar.TabIndex = 19;
             this.btnSolicitar.Text = "INGRESAR";
             this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
             // label4
             // 
@@ -199,6 +200,7 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.tlpEmployee);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmEmployeeLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado - Inicio de Sesión";
             this.tlpEmployee.ResumeLayout(false);
             this.tlpEmployee.PerformLayout();
@@ -212,13 +214,11 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.ComboBox cmbCabin;
 
-        private System.Windows.Forms.ComboBox comboBox1;
 
         private System.Windows.Forms.TextBox txtPasswordEmployee;
 
         private System.Windows.Forms.TextBox txtUserEmployee;
 
-        private System.Windows.Forms.TextBox textBox1;
 
         private System.Windows.Forms.Label label3;
 
@@ -229,11 +229,9 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.PictureBox picLogoEmployee;
 
-        private System.Windows.Forms.PictureBox pictureBox1;
 
         private System.Windows.Forms.TableLayoutPanel tlpEmployee;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion
     }
