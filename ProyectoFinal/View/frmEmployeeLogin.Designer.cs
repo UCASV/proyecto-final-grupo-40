@@ -37,12 +37,12 @@ namespace ProyectoFinal.View
             this.lblTextLogin1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtUserEmployee = new System.Windows.Forms.TextBox();
             this.txtPasswordEmployee = new System.Windows.Forms.TextBox();
             this.cmbCabin = new System.Windows.Forms.ComboBox();
             this.btnSolicitar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tlpEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picLogoEmployee)).BeginInit();
             this.SuspendLayout();
@@ -56,12 +56,12 @@ namespace ProyectoFinal.View
             this.tlpEmployee.Controls.Add(this.lblTextLogin1, 0, 1);
             this.tlpEmployee.Controls.Add(this.label1, 0, 2);
             this.tlpEmployee.Controls.Add(this.label2, 0, 4);
-            this.tlpEmployee.Controls.Add(this.label3, 1, 2);
             this.tlpEmployee.Controls.Add(this.txtUserEmployee, 0, 3);
             this.tlpEmployee.Controls.Add(this.txtPasswordEmployee, 0, 5);
             this.tlpEmployee.Controls.Add(this.cmbCabin, 1, 3);
             this.tlpEmployee.Controls.Add(this.btnSolicitar, 1, 5);
             this.tlpEmployee.Controls.Add(this.label4, 0, 6);
+            this.tlpEmployee.Controls.Add(this.label3, 1, 2);
             this.tlpEmployee.Location = new System.Drawing.Point(0, 0);
             this.tlpEmployee.Name = "tlpEmployee";
             this.tlpEmployee.RowCount = 7;
@@ -107,10 +107,10 @@ namespace ProyectoFinal.View
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 280);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 33);
+            this.label1.Size = new System.Drawing.Size(237, 33);
             this.label1.TabIndex = 4;
             this.label1.Text = "INGRESE SU USUARIO:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -119,22 +119,10 @@ namespace ProyectoFinal.View
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 374);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 22);
+            this.label2.Size = new System.Drawing.Size(274, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "INGRESE SU CONTRASEÑA:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(307, 272);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(298, 38);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "SELECCIONE LA CABINA EN LA QUE TRABAJARA:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtUserEmployee
             // 
@@ -157,6 +145,7 @@ namespace ProyectoFinal.View
             // cmbCabin
             // 
             this.cmbCabin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbCabin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCabin.FormattingEnabled = true;
             this.cmbCabin.Location = new System.Drawing.Point(353, 326);
             this.cmbCabin.Name = "cmbCabin";
@@ -191,6 +180,18 @@ namespace ProyectoFinal.View
             this.label4.Text = "© Copyright 2020. Presidencia de la República de El Salvador.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(307, 272);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(298, 38);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "SELECCIONE LA CABINA EN LA QUE TRABAJARA:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmEmployeeLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,9 +200,12 @@ namespace ProyectoFinal.View
             this.ClientSize = new System.Drawing.Size(609, 570);
             this.Controls.Add(this.tlpEmployee);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEmployeeLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado - Inicio de Sesión";
+            this.Load += new System.EventHandler(this.frmEmployeeLogin_Load);
             this.tlpEmployee.ResumeLayout(false);
             this.tlpEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picLogoEmployee)).EndInit();

@@ -59,8 +59,11 @@ namespace ProyectoFinal.View
             this.ClientSize = new System.Drawing.Size(490, 492);
             this.Controls.Add(this.tlpCabin);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmEmployeeCabin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CABINA - Gestor Central";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployeeCabin_FormClosing);
             this.ResumeLayout(false);
         }
 
