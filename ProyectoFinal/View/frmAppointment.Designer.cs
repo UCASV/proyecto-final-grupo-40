@@ -56,7 +56,10 @@ namespace ProyectoFinal.View
             this.ClientSize = new System.Drawing.Size(485, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAppointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panel de Creacion de Cita";
             this.ResumeLayout(false);
         }

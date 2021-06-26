@@ -218,7 +218,10 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.lblTextLogin2);
             this.Controls.Add(this.picLogoSv);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDiseases";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro - Área de enfermedades";
             ((System.ComponentModel.ISupportInitialize) (this.picLogoSv)).EndInit();
             this.grpDiseases.ResumeLayout(false);
@@ -228,7 +231,6 @@ namespace ProyectoFinal.View
         private System.Windows.Forms.Button btnReturn;
 
         private System.Windows.Forms.Button btnSolicitar;
-        private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox4;
@@ -243,13 +245,11 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.GroupBox grpDiseases;
 
-        private System.Windows.Forms.GroupBox groupBox1;
 
         private System.Windows.Forms.Label lblTextLogin2;
 
         private System.Windows.Forms.PictureBox picLogoSv;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion
     }

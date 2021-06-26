@@ -150,7 +150,10 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.picLogoEmployee);
             this.Controls.Add(this.lblTextLogin1);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAppointmentDay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CITA - Reservación";
             ((System.ComponentModel.ISupportInitialize) (this.picLogoEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvAppointment)).EndInit();
@@ -160,16 +163,11 @@ namespace ProyectoFinal.View
         private System.Windows.Forms.Button btnContinue;
 
         private System.Windows.Forms.Button btnPdf;
-
-        private System.Windows.Forms.Button btnSolicitar;
-        private System.Windows.Forms.Button button1;
-
+        
         private System.Windows.Forms.DataGridView dgvAppointment;
 
         private System.Windows.Forms.Label label1;
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-
+        
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
         private System.Windows.Forms.Label lblTextLogin2;
