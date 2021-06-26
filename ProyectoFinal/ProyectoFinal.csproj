@@ -19,6 +19,12 @@
       <Compile Update="View\frmEmployeeCabin.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="View\frmDiseases.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="View\frmAppointmentDay.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
