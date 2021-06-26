@@ -117,7 +117,7 @@ namespace ProyectoFinal.View
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(150, 31);
             this.btnPdf.TabIndex = 22;
-            this.btnPdf.Text = "CONTINUAR";
+            this.btnPdf.Text = "PDF";
             this.btnPdf.UseVisualStyleBackColor = false;
             // 
             // btnContinue
