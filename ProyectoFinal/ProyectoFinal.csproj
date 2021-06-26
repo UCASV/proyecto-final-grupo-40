@@ -25,6 +25,18 @@
       <Compile Update="View\frmAppointmentDay.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="View\frmAppointmentTracking.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="View\frmWaitingRoom.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="View\frmVaccination.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="View\frmSecondDose.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

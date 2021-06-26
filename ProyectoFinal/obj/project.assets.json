@@ -1576,19 +1576,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nivek\\.nuget\\packages\\": {}
+    "C:\\Users\\Home\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nivek\\Desktop\\Nueva carpeta (6)\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
+      "projectUniqueName": "C:\\Users\\Home\\Desktop\\PROYECTO POO-BASES CLASSROOM\\rama main\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
       "projectName": "ProyectoFinal",
-      "projectPath": "C:\\Users\\nivek\\Desktop\\Nueva carpeta (6)\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
-      "packagesPath": "C:\\Users\\nivek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nivek\\Desktop\\Nueva carpeta (6)\\proyecto-final-grupo-40\\ProyectoFinal\\obj\\",
+      "projectPath": "C:\\Users\\Home\\Desktop\\PROYECTO POO-BASES CLASSROOM\\rama main\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
+      "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Home\\Desktop\\PROYECTO POO-BASES CLASSROOM\\rama main\\proyecto-final-grupo-40\\ProyectoFinal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nivek\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows"
@@ -1645,7 +1645,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

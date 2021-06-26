@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace ProyectoFinal.View
 {
@@ -8,5 +9,7 @@ namespace ProyectoFinal.View
         {
             InitializeComponent();
         }
+
+        
     }
 }
