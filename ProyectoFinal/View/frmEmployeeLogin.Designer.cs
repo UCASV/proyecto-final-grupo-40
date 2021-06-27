@@ -177,6 +177,7 @@ namespace ProyectoFinal.View
             this.btnSolicitar.TabIndex = 19;
             this.btnSolicitar.Text = "INGRESAR";
             this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
             // label4
             // 
@@ -200,6 +201,7 @@ namespace ProyectoFinal.View
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmEmployeeLogin";
             this.Text = "Empleado - Inicio de Sesión";
+            this.Load += new System.EventHandler(this.frmEmployeeLogin_Load);
             this.tlpEmployee.ResumeLayout(false);
             this.tlpEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picLogoEmployee)).EndInit();

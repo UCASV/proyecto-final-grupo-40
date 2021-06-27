@@ -229,6 +229,7 @@ namespace ProyectoFinal.View
             this.MinimizeBox = false;
             this.Name = "frmEmployeeCabin";
             this.Text = "CABINA - Gestor Central";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployeeCabin_FormClosing);
             this.ResumeLayout(false);
         }
 
