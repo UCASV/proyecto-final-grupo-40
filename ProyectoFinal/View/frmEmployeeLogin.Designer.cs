@@ -157,6 +157,7 @@ namespace ProyectoFinal.View
             // cmbCabin
             // 
             this.cmbCabin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbCabin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCabin.FormattingEnabled = true;
             this.cmbCabin.Location = new System.Drawing.Point(353, 326);
             this.cmbCabin.Name = "cmbCabin";
@@ -199,7 +200,10 @@ namespace ProyectoFinal.View
             this.ClientSize = new System.Drawing.Size(609, 570);
             this.Controls.Add(this.tlpEmployee);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEmployeeLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empleado - Inicio de Sesión";
             this.Load += new System.EventHandler(this.frmEmployeeLogin_Load);
             this.tlpEmployee.ResumeLayout(false);

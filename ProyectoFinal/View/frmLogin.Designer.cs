@@ -33,8 +33,6 @@ namespace ProyectoFinal.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.tlpLogin = new System.Windows.Forms.TableLayoutPanel();
-            this.txtIdentifierNumber = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@ namespace ProyectoFinal.View
             this.label8 = new System.Windows.Forms.Label();
             this.btnSolicitar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtInsti = new System.Windows.Forms.TextBox();
             this.tlpLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.picLogoSv)).BeginInit();
             this.SuspendLayout();
@@ -62,8 +62,6 @@ namespace ProyectoFinal.View
             this.tlpLogin.ColumnCount = 2;
             this.tlpLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpLogin.Controls.Add(this.txtIdentifierNumber, 0, 10);
-            this.tlpLogin.Controls.Add(this.label7, 0, 9);
             this.tlpLogin.Controls.Add(this.txtEmail, 1, 8);
             this.tlpLogin.Controls.Add(this.txtAge, 0, 8);
             this.tlpLogin.Controls.Add(this.label6, 1, 7);
@@ -82,6 +80,8 @@ namespace ProyectoFinal.View
             this.tlpLogin.Controls.Add(this.label8, 0, 11);
             this.tlpLogin.Controls.Add(this.btnSolicitar, 0, 12);
             this.tlpLogin.Controls.Add(this.button1, 1, 12);
+            this.tlpLogin.Controls.Add(this.label7, 0, 9);
+            this.tlpLogin.Controls.Add(this.txtInsti, 0, 10);
             this.tlpLogin.Location = new System.Drawing.Point(1, 0);
             this.tlpLogin.Name = "tlpLogin";
             this.tlpLogin.RowCount = 15;
@@ -102,29 +102,6 @@ namespace ProyectoFinal.View
             this.tlpLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tlpLogin.Size = new System.Drawing.Size(784, 700);
             this.tlpLogin.TabIndex = 0;
-            // 
-            // txtIdentifierNumber
-            // 
-            this.txtIdentifierNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIdentifierNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtIdentifierNumber.Location = new System.Drawing.Point(56, 567);
-            this.txtIdentifierNumber.Name = "txtIdentifierNumber";
-            this.txtIdentifierNumber.Size = new System.Drawing.Size(279, 24);
-            this.txtIdentifierNumber.TabIndex = 16;
-            this.txtIdentifierNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tlpLogin.SetColumnSpan(this.label7, 2);
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 531);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(498, 31);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "INGRESA TU NÚMERO IDENTIFICADOR DE UNA INSTITUCIÓN ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtEmail
             // 
@@ -323,6 +300,7 @@ namespace ProyectoFinal.View
             this.btnSolicitar.TabIndex = 18;
             this.btnSolicitar.Text = "CONSULTAR";
             this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
             // button1
             // 
@@ -338,6 +316,30 @@ namespace ProyectoFinal.View
             this.button1.TabIndex = 19;
             this.button1.Text = "REGRESAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tlpLogin.SetColumnSpan(this.label7, 2);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 531);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(491, 31);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "INGRESA TU INSTITUCION SI PERTENECES A ALGUNA";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtInsti
+            // 
+            this.txtInsti.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtInsti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtInsti.Location = new System.Drawing.Point(56, 567);
+            this.txtInsti.Name = "txtInsti";
+            this.txtInsti.Size = new System.Drawing.Size(279, 24);
+            this.txtInsti.TabIndex = 20;
+            this.txtInsti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmLogin
             // 
@@ -358,15 +360,14 @@ namespace ProyectoFinal.View
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.TextBox txtInsti;
+
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.Button btnSolicitar;
 
         private System.Windows.Forms.Label label8;
 
-        private System.Windows.Forms.TextBox txtIdentifierNumber;
-
-        
 
         private System.Windows.Forms.Label label7;
 

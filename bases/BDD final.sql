@@ -114,4 +114,16 @@ insert into EMPLOYEE ( employee_name,institutional_mail,direction,employee_type,
 	values ('Julian Ochoa','roberC123@gob.sv','Lot San Antonio, Sonsonate','vacunador','jnnduwo3','unneue9');
     
 insert into CABIN( direction,phone,manager_name,mail) values ('Caluco, sonsonate','50322838493','Roberto Ramirez','cabina1Caluco@gob.sv');
+
+insert into INSTITUTIONAL_ID(identificator) values ('MINED');
+insert into INSTITUTIONAL_ID(identificator) values ('PNC');
+insert into INSTITUTIONAL_ID(identificator) values ('FA');
+insert into INSTITUTIONAL_ID(identificator) values ('MINSAL');
+
+SELECT * FROM INSTITUTIONAL_ID;
+
 SELECT * FROM EMPLOYEE;
+
+SELECT * FROM CITIZEN;
+
+alter table CITIZEN modify institutional_id varchar(25);

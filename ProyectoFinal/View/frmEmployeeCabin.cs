@@ -16,5 +16,11 @@ namespace ProyectoFinal.View
         {
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmLogin window2 = new frmLogin();
+            window2.Show();
+        }
     }
 }

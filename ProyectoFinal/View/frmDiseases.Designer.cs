@@ -218,7 +218,10 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.lblTextLogin2);
             this.Controls.Add(this.picLogoSv);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDiseases";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro - Área de enfermedades";
             ((System.ComponentModel.ISupportInitialize) (this.picLogoSv)).EndInit();
             this.grpDiseases.ResumeLayout(false);
