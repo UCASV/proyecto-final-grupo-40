@@ -161,14 +161,13 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.Button btnPdf;
 
-        private System.Windows.Forms.Button btnSolicitar;
-        private System.Windows.Forms.Button button1;
+        
 
         private System.Windows.Forms.DataGridView dgvAppointment;
 
         private System.Windows.Forms.Label label1;
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
 

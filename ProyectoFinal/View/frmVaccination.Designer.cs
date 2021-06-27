@@ -138,7 +138,7 @@ namespace ProyectoFinal.View
         private System.Windows.Forms.Button btnCancel;
 
         private System.Windows.Forms.Button btnContinue;
-        private System.Windows.Forms.Button button1;
+        
 
         private System.Windows.Forms.TextBox txtDui;
 

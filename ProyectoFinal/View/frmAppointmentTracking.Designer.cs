@@ -196,8 +196,7 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.Button btnPdf;
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        
 
         private System.Windows.Forms.Button btnSolicitar;
 

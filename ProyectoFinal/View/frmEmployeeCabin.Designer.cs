@@ -290,7 +290,7 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.Label lblTextLogin1;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        
 
         #endregion
     }

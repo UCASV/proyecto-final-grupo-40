@@ -366,7 +366,7 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.TextBox txtIdentifierNumber;
 
-        private System.Windows.Forms.TextBox textBox1;
+        
 
         private System.Windows.Forms.Label label7;
 
@@ -398,11 +398,11 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.PictureBox picLogoSv;
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        
 
         private System.Windows.Forms.TableLayoutPanel tlpLogin;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        
 
         #endregion
     }

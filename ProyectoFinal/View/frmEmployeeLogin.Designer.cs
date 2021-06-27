@@ -212,13 +212,13 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.ComboBox cmbCabin;
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        
 
         private System.Windows.Forms.TextBox txtPasswordEmployee;
 
         private System.Windows.Forms.TextBox txtUserEmployee;
 
-        private System.Windows.Forms.TextBox textBox1;
+        
 
         private System.Windows.Forms.Label label3;
 
@@ -229,11 +229,11 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.PictureBox picLogoEmployee;
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        
 
         private System.Windows.Forms.TableLayoutPanel tlpEmployee;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        
 
         #endregion
     }
