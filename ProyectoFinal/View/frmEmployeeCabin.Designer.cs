@@ -204,6 +204,7 @@ namespace ProyectoFinal.View
             this.button5.TabIndex = 25;
             this.button5.Text = "REALIZAR CITA";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmEmployeeCabin
             // 
@@ -228,6 +229,7 @@ namespace ProyectoFinal.View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEmployeeCabin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CABINA - Gestor Central";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployeeCabin_FormClosing);
             this.ResumeLayout(false);
