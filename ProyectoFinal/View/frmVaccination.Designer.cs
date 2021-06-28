@@ -128,7 +128,10 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.lblTextLogin1);
             this.Controls.Add(this.picLogoSv);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmVaccination";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso de Vacunación";
             ((System.ComponentModel.ISupportInitialize) (this.picLogoSv)).EndInit();
             this.ResumeLayout(false);
