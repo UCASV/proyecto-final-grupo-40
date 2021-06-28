@@ -9,7 +9,7 @@ using ProyectoFinal;
 namespace ProyectoFinal.Migrations
 {
     [DbContext(typeof(CabinContext))]
-    [Migration("20210626043822_init")]
+    [Migration("20210627235325_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -171,8 +171,9 @@ namespace ProyectoFinal.Migrations
                         .HasColumnType("varchar(15)")
                         .HasColumnName("DUI");
 
-                    b.Property<int?>("InstitutionalId")
-                        .HasColumnType("int")
+                    b.Property<string>("InstitutionalId")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
                         .HasColumnName("institutional_id");
 
                     b.Property<string>("Mail")
@@ -192,7 +193,7 @@ namespace ProyectoFinal.Migrations
                     b.ToTable("citizen");
                 });
 
-            modelBuilder.Entity("ProyectoFinal.Disease", b =>
+            modelBuilder.Entity("ProyectoFinal.Citizenxdisease", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -203,14 +204,32 @@ namespace ProyectoFinal.Migrations
                         .HasColumnType("int")
                         .HasColumnName("citizen_id");
 
-                    b.Property<string>("DiseaseaName")
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)")
-                        .HasColumnName("diseasea_name");
+                    b.Property<int?>("DiseaseId")
+                        .HasColumnType("int")
+                        .HasColumnName("disease_id");
 
                     b.HasKey("Id");
 
-                    b.HasIndex(new[] { "CitizenId" }, "FK_citizen");
+                    b.HasIndex(new[] { "CitizenId" }, "FK_citizenxdisease_citizen");
+
+                    b.HasIndex(new[] { "DiseaseId" }, "FK_citizenxdisease_disease");
+
+                    b.ToTable("citizenxdisease");
+                });
+
+            modelBuilder.Entity("ProyectoFinal.Disease", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id");
+
+                    b.Property<string>("DiseaseaName")
+                        .HasMaxLength(40)
+                        .HasColumnType("varchar(40)")
+                        .HasColumnName("diseasea_name");
+
+                    b.HasKey("Id");
 
                     b.ToTable("disease");
                 });
@@ -356,14 +375,21 @@ namespace ProyectoFinal.Migrations
                     b.Navigation("Cabin");
                 });
 
-            modelBuilder.Entity("ProyectoFinal.Disease", b =>
+            modelBuilder.Entity("ProyectoFinal.Citizenxdisease", b =>
                 {
                     b.HasOne("ProyectoFinal.Citizen", "Citizen")
-                        .WithMany("Diseases")
+                        .WithMany("Citizenxdiseases")
                         .HasForeignKey("CitizenId")
-                        .HasConstraintName("FK_citizen");
+                        .HasConstraintName("FK_citizenxdisease_citizen");
+
+                    b.HasOne("ProyectoFinal.Disease", "Disease")
+                        .WithMany("Citizenxdiseases")
+                        .HasForeignKey("DiseaseId")
+                        .HasConstraintName("FK_citizenxdisease_disease");
 
                     b.Navigation("Citizen");
+
+                    b.Navigation("Disease");
                 });
 
             modelBuilder.Entity("ProyectoFinal.Employeexcabin", b =>
@@ -406,9 +432,14 @@ namespace ProyectoFinal.Migrations
 
                     b.Navigation("AppointmentTwoos");
 
-                    b.Navigation("Diseases");
+                    b.Navigation("Citizenxdiseases");
 
                     b.Navigation("InstitutionalIds");
+                });
+
+            modelBuilder.Entity("ProyectoFinal.Disease", b =>
+                {
+                    b.Navigation("Citizenxdiseases");
                 });
 
             modelBuilder.Entity("ProyectoFinal.Employee", b =>

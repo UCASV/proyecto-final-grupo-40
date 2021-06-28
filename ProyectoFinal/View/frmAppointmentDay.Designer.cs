@@ -150,6 +150,7 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.picLogoEmployee);
             this.Controls.Add(this.lblTextLogin1);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmAppointmentDay";
             this.Text = "CITA - Reservación";
             ((System.ComponentModel.ISupportInitialize) (this.picLogoEmployee)).EndInit();

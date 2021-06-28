@@ -190,6 +190,7 @@ namespace ProyectoFinal.View
             this.btnSolicitar.TabIndex = 19;
             this.btnSolicitar.Text = "CONSULTAR";
             this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
             // btnReturn
             // 
@@ -205,6 +206,7 @@ namespace ProyectoFinal.View
             this.btnReturn.TabIndex = 20;
             this.btnReturn.Text = "REGRESAR";
             this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // frmDiseases
             // 

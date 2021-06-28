@@ -11,7 +11,7 @@ namespace ProyectoFinal
         {
             AppointmentOnes = new HashSet<AppointmentOne>();
             AppointmentTwoos = new HashSet<AppointmentTwoo>();
-            Diseases = new HashSet<Disease>();
+            Citizenxdiseases = new HashSet<Citizenxdisease>();
             InstitutionalIds = new HashSet<InstitutionalId>();
         }
 
@@ -28,7 +28,7 @@ namespace ProyectoFinal
         public virtual Cabin Cabin { get; set; }
         public virtual ICollection<AppointmentOne> AppointmentOnes { get; set; }
         public virtual ICollection<AppointmentTwoo> AppointmentTwoos { get; set; }
-        public virtual ICollection<Disease> Diseases { get; set; }
+        public virtual ICollection<Citizenxdisease> Citizenxdiseases { get; set; }
         public virtual ICollection<InstitutionalId> InstitutionalIds { get; set; }
     }
 }
