@@ -72,19 +72,18 @@ namespace ProyectoFinal.View
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 224);
+            this.label1.Location = new System.Drawing.Point(40, 224);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 33);
             this.label1.TabIndex = 6;
             this.label1.Text = "INGRESA TU NÚMERO DE DUI *";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtDui
             // 
             this.txtDui.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDui.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtDui.Location = new System.Drawing.Point(22, 260);
+            this.txtDui.Location = new System.Drawing.Point(40, 260);
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(231, 24);
             this.txtDui.TabIndex = 7;
@@ -149,6 +148,7 @@ namespace ProyectoFinal.View
             this.btnCreateAppointment.TabIndex = 25;
             this.btnCreateAppointment.Text = "Crear cita";
             this.btnCreateAppointment.UseVisualStyleBackColor = false;
+            this.btnCreateAppointment.Click += new System.EventHandler(this.btnCreateAppointment_Click);
             // 
             // label2
             // 

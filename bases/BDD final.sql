@@ -32,7 +32,7 @@ CREATE TABLE CITIZEN(
 	id int primary key auto_increment,
 	DUI varchar(15),
 	citizen_name varchar(30),
-    address varchar(30),
+    address varchar(200),
     phone varchar(15),
     age int,
     institutional_id varchar(50),
