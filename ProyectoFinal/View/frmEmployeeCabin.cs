@@ -19,8 +19,13 @@ namespace ProyectoFinal.View
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmLogin window2 = new frmLogin();
+            frmLogin window2 = new frmLogin(employee);
             window2.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

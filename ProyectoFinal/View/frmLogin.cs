@@ -12,9 +12,11 @@ namespace ProyectoFinal.View
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        public Employee employee { get; set; }
+        public frmLogin(Employee employee)
         {
             InitializeComponent();
+            this.employee = employee;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace ProyectoFinal.View
                        u => u.CitizenName.Equals(txtName.Text) && u.Dui.Equals(txtDui.Text)
                    ).ToList();
                    
-                   frmDiseases window = new frmDiseases(Result[0]);
+                   frmDiseases window = new frmDiseases(Result[0], employee);
                    this.Hide();
                    window.Show();
                }

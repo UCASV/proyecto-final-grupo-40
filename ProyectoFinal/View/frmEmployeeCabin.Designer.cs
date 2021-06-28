@@ -44,6 +44,7 @@ namespace ProyectoFinal.View
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTextLogin1
@@ -51,7 +52,7 @@ namespace ProyectoFinal.View
             this.lblTextLogin1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTextLogin1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTextLogin1.ForeColor = System.Drawing.Color.White;
-            this.lblTextLogin1.Location = new System.Drawing.Point(24, 9);
+            this.lblTextLogin1.Location = new System.Drawing.Point(36, 50);
             this.lblTextLogin1.Name = "lblTextLogin1";
             this.lblTextLogin1.Size = new System.Drawing.Size(442, 33);
             this.lblTextLogin1.TabIndex = 2;
@@ -63,7 +64,7 @@ namespace ProyectoFinal.View
             this.lblTextLogin2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTextLogin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTextLogin2.ForeColor = System.Drawing.Color.White;
-            this.lblTextLogin2.Location = new System.Drawing.Point(46, 61);
+            this.lblTextLogin2.Location = new System.Drawing.Point(46, 104);
             this.lblTextLogin2.Name = "lblTextLogin2";
             this.lblTextLogin2.Size = new System.Drawing.Size(401, 19);
             this.lblTextLogin2.TabIndex = 3;
@@ -153,7 +154,7 @@ namespace ProyectoFinal.View
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(336, 302);
+            this.button1.Location = new System.Drawing.Point(336, 311);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 28);
             this.button1.TabIndex = 21;
@@ -168,7 +169,7 @@ namespace ProyectoFinal.View
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(336, 257);
+            this.button2.Location = new System.Drawing.Point(336, 266);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 28);
             this.button2.TabIndex = 22;
@@ -198,7 +199,7 @@ namespace ProyectoFinal.View
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(336, 162);
+            this.button5.Location = new System.Drawing.Point(336, 171);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 28);
             this.button5.TabIndex = 25;
@@ -206,12 +207,29 @@ namespace ProyectoFinal.View
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(36, 412);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(130, 28);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.Text = "Salir";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmEmployeeCabin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (31)))), ((int) (((byte) (65)))), ((int) (((byte) (185)))));
-            this.ClientSize = new System.Drawing.Size(517, 529);
+            this.ClientSize = new System.Drawing.Size(517, 462);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -234,6 +252,8 @@ namespace ProyectoFinal.View
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployeeCabin_FormClosing);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnClose;
 
         private System.Windows.Forms.Button button5;
 
