@@ -35,15 +35,20 @@ CREATE TABLE CITIZEN(
     address varchar(30),
     phone varchar(15),
     age int,
-    institutional_id int,
-    mail varchar(20),
+    institutional_id varchar(50),
+    mail varchar(60),
     cabin_id int
 );
 
 CREATE TABLE DISEASE(
 	id int primary key auto_increment,
-    diseasea_name varchar(30),
-    citizen_id int
+    diseasea_name varchar(40)
+);
+
+CREATE TABLE CITIZENXDISEASE(
+	id int primary key auto_increment,
+	citizen_id int,
+    disease_id int
 );
 
 CREATE TABLE APPOINTMENT_ONE(
@@ -81,11 +86,14 @@ alter table EMPLOYEExCABIN add constraint FK_employexcabin
 alter table EMPLOYEExCABIN add constraint FK_employexcabin_employee
 	foreign key(employee_id) references EMPLOYEE(id);
     
+alter table CITIZENXDISEASE add constraint FK_citizenxdisease_citizen
+	foreign key(citizen_id) references CITIZEN(id);
+
+alter table CITIZENXDISEASE add constraint FK_citizenxdisease_disease
+	foreign key(disease_id) references DISEASE(id);
+    
 alter table CITIZEN add constraint FK_cabin
 	foreign key(cabin_id ) references CABIN(id);
-    
-alter table DISEASE add constraint FK_citizen
-	foreign key(citizen_id ) references CITIZEN(id);
     
 alter table APPOINTMENT_ONE add constraint FK_citizen_one
 	foreign key(citizen_id ) references CITIZEN(id);
@@ -120,10 +128,21 @@ insert into INSTITUTIONAL_ID(identificator) values ('PNC');
 insert into INSTITUTIONAL_ID(identificator) values ('FA');
 insert into INSTITUTIONAL_ID(identificator) values ('MINSAL');
 
+insert into DISEASE (diseasea_name)values ('Cancer');
+insert into DISEASE (diseasea_name)values ('Demencia');
+insert into DISEASE (diseasea_name)values ('Artritis');
+insert into DISEASE (diseasea_name)values ('VIH/SIDA');
+insert into DISEASE (diseasea_name)values ('Asma');
+insert into DISEASE (diseasea_name)values ('Epilepsia');
+insert into DISEASE (diseasea_name)values ('Diabetes');
+insert into DISEASE (diseasea_name)values ('Enfermedad del corazon');
+
 SELECT * FROM INSTITUTIONAL_ID;
 
 SELECT * FROM EMPLOYEE;
 
 SELECT * FROM CITIZEN;
 
-alter table CITIZEN modify institutional_id varchar(25);
+SELECT * FROM DISEASE;
+
+SELECT * FROM CITIZENXDISEASE;

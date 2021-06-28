@@ -21,6 +21,7 @@ namespace ProyectoFinal
         public virtual DbSet<AppointmentTwoo> AppointmentTwoos { get; set; }
         public virtual DbSet<Cabin> Cabins { get; set; }
         public virtual DbSet<Citizen> Citizens { get; set; }
+        public virtual DbSet<Citizenxdisease> Citizenxdiseases { get; set; }
         public virtual DbSet<Disease> Diseases { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Employeexcabin> Employeexcabins { get; set; }
@@ -158,7 +159,9 @@ namespace ProyectoFinal
                     .HasMaxLength(15)
                     .HasColumnName("DUI");
 
-                entity.Property(e => e.InstitutionalId).HasColumnName("institutional_id");
+                entity.Property(e => e.InstitutionalId)
+                    .HasMaxLength(50)
+                    .HasColumnName("institutional_id");
 
                 entity.Property(e => e.Mail)
                     .HasMaxLength(20)
@@ -174,24 +177,40 @@ namespace ProyectoFinal
                     .HasConstraintName("FK_cabin");
             });
 
-            modelBuilder.Entity<Disease>(entity =>
+            modelBuilder.Entity<Citizenxdisease>(entity =>
             {
-                entity.ToTable("disease");
+                entity.ToTable("citizenxdisease");
 
-                entity.HasIndex(e => e.CitizenId, "FK_citizen");
+                entity.HasIndex(e => e.CitizenId, "FK_citizenxdisease_citizen");
+
+                entity.HasIndex(e => e.DiseaseId, "FK_citizenxdisease_disease");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.CitizenId).HasColumnName("citizen_id");
 
-                entity.Property(e => e.DiseaseaName)
-                    .HasMaxLength(30)
-                    .HasColumnName("diseasea_name");
+                entity.Property(e => e.DiseaseId).HasColumnName("disease_id");
 
                 entity.HasOne(d => d.Citizen)
-                    .WithMany(p => p.Diseases)
+                    .WithMany(p => p.Citizenxdiseases)
                     .HasForeignKey(d => d.CitizenId)
-                    .HasConstraintName("FK_citizen");
+                    .HasConstraintName("FK_citizenxdisease_citizen");
+
+                entity.HasOne(d => d.Disease)
+                    .WithMany(p => p.Citizenxdiseases)
+                    .HasForeignKey(d => d.DiseaseId)
+                    .HasConstraintName("FK_citizenxdisease_disease");
+            });
+
+            modelBuilder.Entity<Disease>(entity =>
+            {
+                entity.ToTable("disease");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.DiseaseaName)
+                    .HasMaxLength(40)
+                    .HasColumnName("diseasea_name");
             });
 
             modelBuilder.Entity<Employee>(entity =>

@@ -25,6 +25,19 @@ namespace ProyectoFinal.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "disease",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    diseasea_name = table.Column<string>(type: "varchar(40)", maxLength: 40, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_disease", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "employee",
                 columns: table => new
                 {
@@ -53,7 +66,7 @@ namespace ProyectoFinal.Migrations
                     address = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: true),
                     phone = table.Column<string>(type: "varchar(15)", maxLength: 15, nullable: true),
                     age = table.Column<int>(type: "int", nullable: true),
-                    institutional_id = table.Column<int>(type: "int", nullable: true),
+                    institutional_id = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     mail = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true),
                     cabin_id = table.Column<int>(type: "int", nullable: true)
                 },
@@ -159,21 +172,27 @@ namespace ProyectoFinal.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "disease",
+                name: "citizenxdisease",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    diseasea_name = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: true),
-                    citizen_id = table.Column<int>(type: "int", nullable: true)
+                    citizen_id = table.Column<int>(type: "int", nullable: true),
+                    disease_id = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_disease", x => x.id);
+                    table.PrimaryKey("PK_citizenxdisease", x => x.id);
                     table.ForeignKey(
-                        name: "FK_citizen",
+                        name: "FK_citizenxdisease_citizen",
                         column: x => x.citizen_id,
                         principalTable: "citizen",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_citizenxdisease_disease",
+                        column: x => x.disease_id,
+                        principalTable: "disease",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -224,9 +243,14 @@ namespace ProyectoFinal.Migrations
                 column: "cabin_id");
 
             migrationBuilder.CreateIndex(
-                name: "FK_citizen",
-                table: "disease",
+                name: "FK_citizenxdisease_citizen",
+                table: "citizenxdisease",
                 column: "citizen_id");
+
+            migrationBuilder.CreateIndex(
+                name: "FK_citizenxdisease_disease",
+                table: "citizenxdisease",
+                column: "disease_id");
 
             migrationBuilder.CreateIndex(
                 name: "FK_employexcabin",
@@ -253,13 +277,16 @@ namespace ProyectoFinal.Migrations
                 name: "appointment_twoo");
 
             migrationBuilder.DropTable(
-                name: "disease");
+                name: "citizenxdisease");
 
             migrationBuilder.DropTable(
                 name: "employeexcabin");
 
             migrationBuilder.DropTable(
                 name: "institutional_id");
+
+            migrationBuilder.DropTable(
+                name: "disease");
 
             migrationBuilder.DropTable(
                 name: "employee");
