@@ -8,10 +8,12 @@ namespace ProyectoFinal.View
     public partial class frmDiseases : Form
     {
         public Citizen citizen { get; set; }
-        public frmDiseases(Citizen citizen) 
+        public Employee employee { get; set; }
+        public frmDiseases(Citizen citizen, Employee employee) 
         {
             InitializeComponent();
             this.citizen = citizen;
+            this.employee = employee;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace ProyectoFinal.View
                         .OrderBy(dxc => dxc.CitizenId)
                         .ToList();
                     
-                    frmAppointmentDay window = new frmAppointmentDay(citizen);
+                    frmAppointmentDay window = new frmAppointmentDay(citizen,employee);
                     this.Hide();
                     window.Show();
         }
