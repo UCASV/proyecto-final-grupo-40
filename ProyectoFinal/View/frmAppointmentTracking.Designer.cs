@@ -37,7 +37,7 @@ namespace ProyectoFinal.View
             this.label1 = new System.Windows.Forms.Label();
             this.txtDui = new System.Windows.Forms.TextBox();
             this.btnSolicitar = new System.Windows.Forms.Button();
-            this.btnPdf = new System.Windows.Forms.Button();
+            this.btnPdf2 = new System.Windows.Forms.Button();
             this.btnContinue = new System.Windows.Forms.Button();
             this.btnCreateAppointment = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,21 +103,22 @@ namespace ProyectoFinal.View
             this.btnSolicitar.TabIndex = 19;
             this.btnSolicitar.Text = "CONSULTAR";
             this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
-            // btnPdf
+            // btnPdf2
             // 
-            this.btnPdf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPdf.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
-            this.btnPdf.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
-            this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPdf.ForeColor = System.Drawing.Color.White;
-            this.btnPdf.Location = new System.Drawing.Point(22, 390);
-            this.btnPdf.Name = "btnPdf";
-            this.btnPdf.Size = new System.Drawing.Size(150, 35);
-            this.btnPdf.TabIndex = 23;
-            this.btnPdf.Text = "Generar PDF";
-            this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPdf2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnPdf2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnPdf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPdf2.ForeColor = System.Drawing.Color.White;
+            this.btnPdf2.Location = new System.Drawing.Point(22, 390);
+            this.btnPdf2.Name = "btnPdf2";
+            this.btnPdf2.Size = new System.Drawing.Size(150, 35);
+            this.btnPdf2.TabIndex = 23;
+            this.btnPdf2.Text = "Generar PDF";
+            this.btnPdf2.UseVisualStyleBackColor = false;
             // 
             // btnContinue
             // 
@@ -133,6 +134,7 @@ namespace ProyectoFinal.View
             this.btnContinue.TabIndex = 24;
             this.btnContinue.Text = "Continuar";
             this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // btnCreateAppointment
             // 
@@ -171,7 +173,7 @@ namespace ProyectoFinal.View
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCreateAppointment);
             this.Controls.Add(this.btnContinue);
-            this.Controls.Add(this.btnPdf);
+            this.Controls.Add(this.btnPdf2);
             this.Controls.Add(this.btnSolicitar);
             this.Controls.Add(this.txtDui);
             this.Controls.Add(this.label1);
@@ -187,6 +189,8 @@ namespace ProyectoFinal.View
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnPdf2;
 
         private System.Windows.Forms.Label label2;
 

@@ -27,5 +27,17 @@ namespace ProyectoFinal.View
         {
             this.Close();
         }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            frmAppointmentTracking check = new frmAppointmentTracking(employee);
+            check.Show();
+        }
+
+        private void btnVaccination_Click(object sender, EventArgs e)
+        {
+            frmVaccination windows = new frmVaccination();
+            windows.Show();
+        }
     }
 }

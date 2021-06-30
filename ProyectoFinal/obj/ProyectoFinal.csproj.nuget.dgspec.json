@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nivek\\Desktop\\Nueva carpeta (3)\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj": {}
+    "C:\\Users\\manci\\OneDrive\\Documentos\\CICLO 1 2021 UCA\\prefinal_proyecto\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nivek\\Desktop\\Nueva carpeta (3)\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj": {
+    "C:\\Users\\manci\\OneDrive\\Documentos\\CICLO 1 2021 UCA\\prefinal_proyecto\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nivek\\Desktop\\Nueva carpeta (3)\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
+        "projectUniqueName": "C:\\Users\\manci\\OneDrive\\Documentos\\CICLO 1 2021 UCA\\prefinal_proyecto\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
         "projectName": "ProyectoFinal",
-        "projectPath": "C:\\Users\\nivek\\Desktop\\Nueva carpeta (3)\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
-        "packagesPath": "C:\\Users\\nivek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nivek\\Desktop\\Nueva carpeta (3)\\proyecto-final-grupo-40\\ProyectoFinal\\obj\\",
+        "projectPath": "C:\\Users\\manci\\OneDrive\\Documentos\\CICLO 1 2021 UCA\\prefinal_proyecto\\proyecto-final-grupo-40\\ProyectoFinal\\ProyectoFinal.csproj",
+        "packagesPath": "C:\\Users\\manci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\manci\\OneDrive\\Documentos\\CICLO 1 2021 UCA\\prefinal_proyecto\\proyecto-final-grupo-40\\ProyectoFinal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nivek\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\manci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
