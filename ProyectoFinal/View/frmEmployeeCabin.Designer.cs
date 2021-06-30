@@ -40,9 +40,9 @@ namespace ProyectoFinal.View
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSolicitar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVaccination = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -146,20 +146,21 @@ namespace ProyectoFinal.View
             this.btnSolicitar.Text = "PASO 4";
             this.btnSolicitar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnVaccination
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(336, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 28);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "PASO 3";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVaccination.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnVaccination.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnVaccination.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnVaccination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVaccination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnVaccination.ForeColor = System.Drawing.Color.White;
+            this.btnVaccination.Location = new System.Drawing.Point(336, 311);
+            this.btnVaccination.Name = "btnVaccination";
+            this.btnVaccination.Size = new System.Drawing.Size(130, 28);
+            this.btnVaccination.TabIndex = 21;
+            this.btnVaccination.Text = "PASO 3";
+            this.btnVaccination.UseVisualStyleBackColor = false;
+            this.btnVaccination.Click += new System.EventHandler(this.btnVaccination_Click);
             // 
             // button2
             // 
@@ -176,20 +177,21 @@ namespace ProyectoFinal.View
             this.button2.Text = "PASO 2";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnCheck
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(336, 214);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 28);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "PASO 1";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnCheck.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (43)))), ((int) (((byte) (48)))), ((int) (((byte) (150)))));
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnCheck.ForeColor = System.Drawing.Color.White;
+            this.btnCheck.Location = new System.Drawing.Point(336, 214);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(130, 28);
+            this.btnCheck.TabIndex = 23;
+            this.btnCheck.Text = "PASO 1";
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // button5
             // 
@@ -231,9 +233,9 @@ namespace ProyectoFinal.View
             this.ClientSize = new System.Drawing.Size(517, 462);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVaccination);
             this.Controls.Add(this.btnSolicitar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -252,6 +254,10 @@ namespace ProyectoFinal.View
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmEmployeeCabin_FormClosing);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnVaccination;
+
+        private System.Windows.Forms.Button btnCheck;
 
         private System.Windows.Forms.Button btnClose;
 
