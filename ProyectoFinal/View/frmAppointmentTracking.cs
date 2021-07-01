@@ -1,23 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Linq;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 
 namespace ProyectoFinal.View
 {
     public partial class frmAppointmentTracking : Form
     {
         public Employee employee { get; set; }
-        public Citizen citizen { get; set; }
 
         public frmAppointmentTracking(Employee employee)
         {
             InitializeComponent();
             this.employee = employee;
-            this.citizen = citizen;
         }
 
         private void btnCreateAppointment_Click(object sender, EventArgs e)
@@ -51,13 +56,47 @@ namespace ProyectoFinal.View
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            frmEmployeeCabin Continue = new frmEmployeeCabin(employee);
-            Continue.Show();
+            this.Close();
         }
 
         private void btnPdf2_Click(object sender, EventArgs e)
         {
             
+            var bd = new CabinContext();
+            
+            var citizens = bd.Citizens.ToList();
+            var exist = citizens.Where(c => c.Dui == txtDui.Text).ToList();
+            var appointmentOnes = bd.AppointmentOnes.ToList();
+            var appointments = appointmentOnes
+                .Where(a =>  a.Citizen.Dui == txtDui.Text)
+                .OrderBy(a => a.CitizenId).ToList();
+            
+            int size = appointments.Count() - 1;
+            
+            string appointmentname = appointments[size].Citizen.CitizenName;
+            string appointmentdui = appointments[size].Citizen.Dui;
+            string appointmentdate = appointments[size].DateAppointment.ToString();
+            string appointmentplace = appointments[size].Place;
+
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true })
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    FileStream file = new FileStream(saveFileDialog.FileName, FileMode.Create);
+                    Document document = new Document(PageSize.A4);
+                    PdfWriter pdf = PdfWriter.GetInstance(document, file);
+                    document.Open();
+                    document.Add(new Paragraph("Detalles de cita"));
+                    document.Add(Chunk.NEWLINE);
+                    document.Add(new Paragraph("DUI: " + appointmentdui));
+                    document.Add(new Paragraph("Nombre: " + appointmentname));
+                    document.Add(new Paragraph("Fecha y hora: " + appointmentdate));
+                    document.Add(new Paragraph("Lugar de vacunación: " + appointmentplace));
+                    document.Close();
+                    pdf.Close();
+                }
+            }
         }
     }
 }

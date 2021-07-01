@@ -1,12 +1,20 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace ProyectoFinal.View
 {
     public partial class frmSecondDose : Form
     {
-        public frmSecondDose()
+        public Employee employee { get; set; }
+        public frmSecondDose(Employee employee)
         {
             InitializeComponent();
+            this.employee = employee;
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

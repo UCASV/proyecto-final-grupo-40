@@ -68,11 +68,11 @@ namespace ProyectoFinal.View
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 178);
+            this.label1.Location = new System.Drawing.Point(44, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 33);
             this.label1.TabIndex = 8;
-            this.label1.Text = "INGRESA TU NÚMERO DE DUI ";
+            this.label1.Text = "INGRESA TU NÚMERO DE DUI:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDui
@@ -81,7 +81,7 @@ namespace ProyectoFinal.View
             this.txtDui.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtDui.Location = new System.Drawing.Point(58, 226);
             this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(231, 24);
+            this.txtDui.Size = new System.Drawing.Size(323, 24);
             this.txtDui.TabIndex = 9;
             this.txtDui.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -99,6 +99,7 @@ namespace ProyectoFinal.View
             this.btnContinue.TabIndex = 25;
             this.btnContinue.Text = "¡VACÚNATE!";
             this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // btnCancel
             // 
@@ -114,6 +115,7 @@ namespace ProyectoFinal.View
             this.btnCancel.TabIndex = 26;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmVaccination
             // 
