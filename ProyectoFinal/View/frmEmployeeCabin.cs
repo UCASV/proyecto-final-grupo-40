@@ -36,8 +36,14 @@ namespace ProyectoFinal.View
 
         private void btnVaccination_Click(object sender, EventArgs e)
         {
-            frmVaccination windows = new frmVaccination();
+            frmVaccination windows = new frmVaccination(employee);
             windows.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmWaitingRoom waitingRoom = new frmWaitingRoom(employee);
+            waitingRoom.Show();
         }
     }
 }

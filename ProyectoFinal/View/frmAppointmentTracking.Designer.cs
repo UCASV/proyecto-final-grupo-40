@@ -119,6 +119,7 @@ namespace ProyectoFinal.View
             this.btnPdf2.TabIndex = 23;
             this.btnPdf2.Text = "Generar PDF";
             this.btnPdf2.UseVisualStyleBackColor = false;
+            this.btnPdf2.Click += new System.EventHandler(this.btnPdf2_Click);
             // 
             // btnContinue
             // 
@@ -184,6 +185,7 @@ namespace ProyectoFinal.View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAppointmentTracking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seguimiento de citas";
             ((System.ComponentModel.ISupportInitialize) (this.picLogoEmployee)).EndInit();
             this.ResumeLayout(false);
@@ -198,9 +200,6 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.Button btnContinue;
 
-        private System.Windows.Forms.Button btnPdf;
-
-        
 
         private System.Windows.Forms.Button btnSolicitar;
 

@@ -176,6 +176,7 @@ namespace ProyectoFinal.View
             this.button2.TabIndex = 22;
             this.button2.Text = "PASO 2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCheck
             // 
@@ -263,13 +264,9 @@ namespace ProyectoFinal.View
 
         private System.Windows.Forms.Button button5;
 
-        private System.Windows.Forms.Button button3;
-
         private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Button btnSolicitar;
-        private System.Windows.Forms.Button button1;
-
         private System.Windows.Forms.Label label6;
 
         private System.Windows.Forms.Label label5;
