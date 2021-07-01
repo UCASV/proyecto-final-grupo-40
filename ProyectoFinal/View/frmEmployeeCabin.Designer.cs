@@ -145,6 +145,7 @@ namespace ProyectoFinal.View
             this.btnSolicitar.TabIndex = 20;
             this.btnSolicitar.Text = "PASO 4";
             this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
             // 
             // btnVaccination
             // 

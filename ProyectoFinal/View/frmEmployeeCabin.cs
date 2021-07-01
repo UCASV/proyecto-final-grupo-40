@@ -45,5 +45,11 @@ namespace ProyectoFinal.View
             frmWaitingRoom waitingRoom = new frmWaitingRoom(employee);
             waitingRoom.Show();
         }
+
+        private void btnSolicitar_Click(object sender, EventArgs e)
+        {
+            frmSecondDose secondDose = new frmSecondDose(employee);
+            secondDose.Show();
+        }
     }
 }

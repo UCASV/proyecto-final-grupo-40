@@ -45,12 +45,12 @@ namespace ProyectoFinal.View
             {
                 exist.ForEach(ex => txtDui.Text = ex.Dui.ToString());
                 MessageBox.Show($"El ciudadano tiene una cita registrada", "seguimiento de citas",
-                    MessageBoxButtons.OK);
+                    MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("El cuidadano no posee una cita registrada", "seguimiento de citas",
-                    MessageBoxButtons.OK);
+                    MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
