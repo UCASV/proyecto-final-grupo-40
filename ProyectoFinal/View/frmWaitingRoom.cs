@@ -42,7 +42,7 @@ namespace ProyectoFinal.View
                 frmVaccination vaccination = new frmVaccination(employee);
                 this.Close();
                 vaccination.Show();
-                    }
+            }
             else 
                 MessageBox.Show("No se encuentra el dui!", "Cabina de vacunacion",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -53,5 +53,7 @@ namespace ProyectoFinal.View
         {
             this.Close();
         }
+
+        
     }
 }
